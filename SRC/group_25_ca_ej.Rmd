@@ -1,0 +1,21 @@
+---
+title: "Group 25 CA pollution burden"
+author: "Allison Gracer & Mae Rennick"
+date: "11/12/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+library(janitor)
+library(here)
+```
+
+
+```{r}
+# read in the data
+ces <- read_csv(here("data", "ces3demographics.csv")) %>% 
+  clean_names()
+```
+
