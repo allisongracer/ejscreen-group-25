@@ -3,6 +3,8 @@ title: "Group 25 CA pollution burden"
 author: "Allison Gracer & Mae Rennick"
 date: "11/12/2021"
 output: html_document
+editor_options: 
+  chunk_output_type: console
 ---
 
 ```{r setup, include=FALSE}
@@ -17,5 +19,19 @@ library(here)
 # read in the data
 ces <- read_csv(here("data", "ces3demographics.csv")) %>% 
   clean_names()
+```
+
+
+## Visualization 
+
+Add a new code chunk to create a basic ggplot2 scatterplot graph (with geom_point) showing % white (x-axis: white_percent, note: depending on your OS this column name might be simplified by janitor::clean_names() to just ‘white’ instead) versus CalEnviroScreen pollution burden score (y-axis: ces_3_0_score). Do not update / finalize the graph further - this is what you will both work on in the next steps. 
+
+
+```{r}
+
+ggplot(ces, aes( x= white_percent, y= ces_3_0_score))+
+  geom_point()
+
+
 ```
 
