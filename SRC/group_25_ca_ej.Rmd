@@ -29,8 +29,11 @@ Add a new code chunk to create a basic ggplot2 scatterplot graph (with geom_poin
 
 ```{r}
 
-ggplot(ces, aes( x= white_percent, y= ces_3_0_score))+
-  geom_point()
+ggplot(ces, aes( x= white_percent, y= ces_3_0_score)) +
+  geom_point() +
+  geom_hex() +
+  labs(x = "\nPercent of white population (%)\n",
+       y = "\nCES 3.0 score\n")
 
 
 ```
