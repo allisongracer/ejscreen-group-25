@@ -44,3 +44,14 @@ ggplot(ces, aes( x= white_percent, y= ces_3_0_score)) +
 ```
 
 **Figure 1:** Percent white population compared to the CalEnviroScreen 3.0 (CSE) in California. The higher count of the population is indicated by color. 
+
+
+## Take Aways
+
+Overall, the with a higher percentage of white population, CES 3.0 scores are at highest density at lower levels. Conversely, at lower percentages of white population, CES 3.0 scores tend to aggregate at higher levels. There appears to the be negative correlation between percent which population and CES 3.0 values, suggesting that race plays a significant role in adjacency and risk of negative cumulative exposure to environmental hazards. 
+
+
+
+## References
+
+U.S. Census Bureau, 2010 Census of Population and Housing, Population and Housing Unit Counts, CPH-2-6, California U.S. Government Printing Office, Washington, DC, 2012.
