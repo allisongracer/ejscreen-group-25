@@ -12,6 +12,7 @@ knitr::opts_chunk$set(echo = TRUE)
 library(tidyverse)
 library(janitor)
 library(here)
+library(hexbin)
 ```
 
 
@@ -24,7 +25,7 @@ ces <- read_csv(here("data", "ces3demographics.csv")) %>%
 
 ## Visualization 
 
-Add a new code chunk to create a basic ggplot2 scatterplot graph (with geom_point) showing % white (x-axis: white_percent, note: depending on your OS this column name might be simplified by janitor::clean_names() to just ‘white’ instead) versus CalEnviroScreen pollution burden score (y-axis: ces_3_0_score). Do not update / finalize the graph further - this is what you will both work on in the next steps. 
+ggplot2 scatterplot graph (with geom_point) showing % white versus CalEnviroScreen pollution burden score 
 
 
 ```{r}
@@ -33,7 +34,9 @@ ggplot(ces, aes( x= white_percent, y= ces_3_0_score)) +
   geom_point() +
   geom_hex() +
   labs(x = "\nPercent of white population (%)\n",
-       y = "\nCES 3.0 score\n")
+       y = "\nCES 3.0 score\n")+
+  scale_fill_gradient(low = "lightblue", high = "darkblue")+
+  theme_minimal()
 
 
 ```
