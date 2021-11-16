@@ -7,8 +7,10 @@ editor_options:
   chunk_output_type: console
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
+
+#Attach packages
 library(tidyverse)
 library(janitor)
 library(here)
@@ -23,15 +25,15 @@ ces <- read_csv(here("data", "ces3demographics.csv")) %>%
 ```
 
 
-## Visualization 
+## Data Visualization 
 
 ggplot2 scatterplot graph (with geom_point) showing % white versus CalEnviroScreen pollution burden score 
 
 
 ```{r}
+# visualize the data
 
 ggplot(ces, aes( x= white_percent, y= ces_3_0_score)) +
-  geom_point() +
   geom_hex() +
   labs(x = "\nPercent of white population (%)\n",
        y = "\nCES 3.0 score\n")+
@@ -41,3 +43,4 @@ ggplot(ces, aes( x= white_percent, y= ces_3_0_score)) +
 
 ```
 
+**Figure 1:** Percent white population compared to the CalEnviroScreen 3.0 (CSE) in California. The higher count of the population is indicated by color. 
