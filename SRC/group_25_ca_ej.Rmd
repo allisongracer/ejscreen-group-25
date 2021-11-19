@@ -48,7 +48,7 @@ ggplot(ces, aes( x= white_percent, y= ces_3_0_score)) +
 
 ## Take Aways
 
-Overall, the with a higher percentage of white population, CES 3.0 scores are at highest density at lower levels. Conversely, at lower percentages of white population, CES 3.0 scores tend to aggregate at higher levels. There appears to the be negative correlation between percent which population and CES 3.0 values, suggesting that race plays a significant role in adjacency and risk of negative cumulative exposure to environmental hazards. 
+Overall, we can extrapolate from this figure that individuals with races other than 'white' are disproportionately affected by multiple sources of pollution, which is represented by the CES 3.0 score. There appears to be a negative correlation between CES 3.0 scores and increasing proportion of white individuals in a community. When percentage of white individuals is lower, we see a high density cluster of CES scores at mid range values (40-60), and at the highest percentage of white individuals in a given population, we see a high density cluster of CES 3.0 scores at low values (0-20), suggesting that at larger percent of white individuals in a population, the less vulnerable the population will be to nearby hazardous environmental conditions. 
 
 
 
